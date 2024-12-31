@@ -4,20 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 280px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            margin: 0 0 20px 0;
+            font-size: 22px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h2>Login</h2>
-    <form action="login.php" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username" required><br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="login.php" method="POST">
+            <label for="username">Enter your username:</label>
+            <input type="text" id="username" name="username" placeholder="Your username" required>
 
-        <button type="submit">Login</button>
-    </form>
+            <label for="password">Enter your password:</label>
+            <input type="password" id="password" name="password" placeholder="Your password" required>
 
-    <p><a href="register.html">Register</a> if you don't have an account.</p>
-    <p><a href="forgot-password.html">Forgot your password?</a></p>
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+        <p><a href="register.html">Sign up</a> if you don't have an account.</p>
+        <p><a href="forgot-password.html">Forgot your password?</a></p>
+    </div>
+
 </body>
 </html>
