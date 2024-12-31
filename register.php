@@ -19,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
     
     if (mysqli_query($conn, $sql)) {
-        // Redirect to the login page after registration
         header("Location: ../html/index.html");
         exit();
     } else {
